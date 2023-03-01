@@ -7,7 +7,8 @@ import { legacy_createStore as createStore } from 'redux'
 import 'antd/dist/reset.css'
 import './index.css'
 
-const store = createStore(pokemonsReducer)
+const store = createStore(pokemonsReducer,window._REDUX_DEVTOOLS_EXTENSION_ &&
+  window._REDUX_DEVTOOLS_EXTENSION_() )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
